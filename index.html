@@ -46,11 +46,16 @@
         <button class="service-button" data-modal-open type="button">Замовити послугу</button>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
+                <button class="modal-button" data-modal-close>
+                    <svg height="18px" width="18px">
+                        <use href="./images/icons.svg#icon-cross"/>
+                    </svg>
+                </button>
                 <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
                 <form class="form">
                     <div class="form-field">
                         <label class="form-label" for="name">Ім'я</label>
-                        <div class="form-input-icon">
+                        <div class="form-input-container">
                             <input autofocus class="form-input" id="name" name="name" type="text"/>
                             <svg class="form-icon" height="18" width="18">
                                 <use href="./images/icons.svg#icon-form-person"></use>
@@ -59,43 +64,43 @@
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="tel">Телефон</label>
-                        <div class="form-input-icon">
-                        <svg class="form-icon" height="18" width="18">
-                            <use href="./images/icons.svg#icon-form-phone"></use>
-                        </svg>
-                        <input class="form-input" id="tel" name="tel" type="tel"/>
+                        <div class="form-input-container">
+                            <input class="form-input" id="tel" name="tel" type="tel"/>
+                            <svg class="form-icon" height="18" width="18">
+                                <use href="./images/icons.svg#icon-form-phone"></use>
+                            </svg>
                         </div>
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="email">Пошта</label>
-                        <div class="form-input-icon">
-                        <svg class="form-icon" height="18" width="18">
-                            <use href="./images/icons.svg#icon-form-email"></use>
-                        </svg>
-                        <input class="form-input" id="email" name="email" type="email"/>
+                        <div class="form-input-container">
+                            <input class="form-input" id="email" name="email" type="email"/>
+                            <svg class="form-icon" height="18" width="18">
+                                <use href="./images/icons.svg#icon-form-email"></use>
+                            </svg>
                         </div>
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="comment">Коментар</label>
-                        <textarea id="comment" name="comment" placeholder="Введіть текст" rows="5"></textarea>
+                        <textarea class="form-comment" id="comment" name="comment"
+                                  placeholder="Введіть текст"></textarea>
                     </div>
                     <div class="form-field">
-                        <input class="form-input" id="contract" name="contract" type="checkbox" value="contract"/>
-                        <label class="form-label" for="contract">Погоджуюся з розсилкою та приймаю Умови договору</label>
+                        <label class="form-label-checkbox" for="contract">
+                            <input class="form-input-checkbox" id="contract" name="contract" type="checkbox"
+                                   value="contract"/>
+                            <span class="form-icon-checkbox"></span>
+                            Погоджуюся з розсилкою та приймаю
+                        </label>
+                        <a class="contract" href="#">Умови договору</a>
                     </div>
-                    <button type="submit">Відправити</button>
+                    <button class="form-button" type="submit">Відправити</button>
                 </form>
-                <button class="modal-button" data-modal-close>
-                    <svg height="18px" width="18px">
-                        <use href="./images/icons.svg#icon-cross"/>
-                    </svg>
-                </button>
             </div>
         </div>
     </section>
     <section class="section">
         <div class="container">
-            <!--        <h2 class="section-title">Про нас</h2>-->
             <ul class="section-list">
                 <li>
                     <div class="section-icon-container">
@@ -412,10 +417,15 @@
                 </li>
             </ul>
         </div>
-        <div class="subscribe">
-                <label  class="subscribe-title" for="subscribe-email">Підпишіться на розсилку</label>
-                <input id="subscribe-email" name="email" placeholder="E-mail" type="email"/>
-        </div>
+        <form>
+            <label class="subscribe-title" for="subscribe-email">Підпишіться на розсилку</label>
+            <input class="subscribe-email" id="subscribe-email" name="email" placeholder="E-mail" type="email"/>
+            <button class="subscribe-button" type="submit">Підписатися
+                <svg class="icon-send" height="24px" width=" 24px">
+                    <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+            </button>
+        </form>
     </div>
 </footer>
 <script src="./js/modal.js"></script>
