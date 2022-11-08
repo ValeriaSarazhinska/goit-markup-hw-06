@@ -263,6 +263,7 @@ a {
     left: 12px;
     transform: translateY(-50%);
     display: inline-block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label {
@@ -283,6 +284,7 @@ a {
     border-radius: 4px;
     padding-left: 42px;
     cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus, .form-input:hover {
@@ -290,7 +292,6 @@ a {
 }
 
 .form-input:focus + .form-icon, .form-input:hover + .form-icon {
-    border-color: var(--blue-main);
     fill: var(--blue-main);
 }
 
@@ -302,6 +303,7 @@ a {
     border: 1px solid var(--transparent-gray-border);
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-comment::placeholder {
@@ -366,6 +368,7 @@ a {
     border-radius: 4px;
     margin: 0 auto;
     margin-top: 20px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-button:hover, .form-button:focus {
@@ -373,7 +376,7 @@ a {
 }
 
 
-.modal-button {
+.close-button {
     position: absolute;
     right: 8px;
     top: 8px;
@@ -386,9 +389,10 @@ a {
     background-color: var(--white-main);
     border-radius: 15px;
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button:hover, .modal-button:focus {
+.close-button:hover, .close-button:focus {
     fill: var(--blue-active);
 }
 
@@ -655,6 +659,7 @@ a {
     font-family: inherit;
     border-radius: 4px;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover, .subscribe-button:focus {
