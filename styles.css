@@ -270,6 +270,7 @@ a {
     margin-bottom: 4px;
     font-size: 12px;
     color: var(--gray-substring);
+    display: block;
 }
 
 .form-input-container {
@@ -326,7 +327,7 @@ a {
     width: 16px;
     height: 15px;
     border: 2px solid var(--black-main);
-    border-radius: 4px;
+    border-radius: 2px;
     opacity: 1;
     vertical-align: middle;
 }
@@ -641,6 +642,9 @@ a {
     color: var(--white-main);
     margin-right: 12px;
     cursor: pointer;
+}
+.subscribe-email:hover, .subscribe-email:focus {
+    border-color: var(--blue-active); ;
 }
 
 .subscribe-button {
